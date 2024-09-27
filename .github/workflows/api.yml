@@ -1,7 +1,7 @@
 name: API Deployment
 
 env:
-  registryName: {your_registry_name}.azurecr.io
+  registryName: ule77xgmlffkwcosureg.azurecr.io
   repositoryName: techexcel/csapi
   dockerFolderPath: ./src/ContosoSuitesWebAPI
   tag: ${{github.run_number}}
@@ -65,7 +65,7 @@ jobs:
     needs: dockerBuildPush
     environment:
       name: prod
-      url: https://{your_prefix}-api.azurewebsites.net/
+      url: https://ule77xgmlffkw-api.azurewebsites.net/
     
     steps:
     - uses: actions/checkout@v4
